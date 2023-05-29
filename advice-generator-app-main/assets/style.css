@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+:root{
+  --Grayish_Blue: hsl(217, 19%, 38%);
+  --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+  --Dark_Blue: hsl(218, 23%, 16%);
+  --Light_Cyan: hsl(193, 38%, 86%);
+  --Neon_Green: hsl(150, 100%, 66%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--Dark_Blue);
+  
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#principal{
+  background-color: var(--Dark_Grayish_Blue);
+  height: 300px;
+  width: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+
+#titulo{
+  color: var(--Neon_Green);
+  background-color: var(--Dark_Grayish_Blue);
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  /* border: solid 2px white; */
+  height: 20px;
+}
+
+#consejo{
+  margin: auto;
+  /* border: solid 2px white; */
+  height: 100px;
+  width: 400px;
+  margin: 10px 50px 10px 50px;
+  background-color: var(--Dark_Grayish_Blue);
+  font-size: 30px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  color: var(--Light_Cyan);
+  text-align: center;
+}
+
+#separador{
+  margin-bottom: 70px;
+  background-color: var(--Dark_Grayish_Blue);
+  width:400px ;
+  /* border: solid 2px white; */
+}
+
+#btn{
+  padding: 15px;
+  border-radius: 100px;
+  background-color: var(--Neon_Green);
+  position: absolute;
+  bottom: -27px;
+}
+
+#btn:hover{
+  box-shadow: 0px 1px 18px 18px rgba(50,255,153,0.3);
+-webkit-box-shadow: 0px 1px 18px 18px rgba(50,255,153,0.3);
+-moz-box-shadow: 0px 1px 18px 18px rgba(50,255,153,0.3);
+}
+
+
