@@ -46,17 +46,16 @@ main{
 }
 
 #consejo{
-  margin: auto;
-  /* border: solid 2px white; */
   height: 100px;
   width: 400px;
-  margin: 10px 50px 10px 50px;
+  margin: 10px 50px;
   background-color: var(--Dark_Grayish_Blue);
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Manrope', sans-serif;
   font-weight: 800;
   color: var(--Light_Cyan);
   text-align: center;
+  text-transform: uppercase;
 }
 
 #separador{

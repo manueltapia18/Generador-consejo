@@ -5,26 +5,31 @@ const consejo = document.getElementById("consejo");
 
 
 
-window.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',textoDeCarga);
+btn.addEventListener('click',generador);
+
+let data;
+async function apiGenerador() {
+  try {
+    const res = await fetch(url);
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
+  
+}
+
+function textoDeCarga() {
   const textInicio = document.createTextNode('Presiona el boton verde para obtener un consejo');
   consejo.appendChild(textInicio);
-  consejo.style.textTransform = 'uppercase';
-  consejo.style.fontSize = '20px'
-})
-
-
-btn.addEventListener('click',generador)
-async function generador() {
-  const res = await fetch(url);
-  const data = await res.json();
-
-  consejo.innerHTML = "";
-
-  titulo.innerHTML = `advice #${data.slip.id}`
-  consejo.innerHTML = `"${data.slip.advice}"`;
 }
 
 
+async function generador() {
+  await apiGenerador()
+  titulo.innerHTML = `advice #${data?.slip?.id ?? ""}`
+  consejo.innerHTML = `"${data?.slip?.advice ?? ""}"`;
+}
 
 
 
